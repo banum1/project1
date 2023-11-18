@@ -11,7 +11,7 @@ WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline
 
-# Copy app source code and build WAR file
+# Copy app source code and build WAR files to 
 COPY src/ ./src/
 RUN mvn package -DskipTests
 
